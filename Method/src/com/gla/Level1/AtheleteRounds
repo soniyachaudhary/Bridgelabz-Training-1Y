@@ -1,0 +1,29 @@
+package com.gla.Level1;
+
+    import java.util.Scanner;
+
+    public class AthleteRounds {
+
+        public static double calculateRounds(double s1, double s2, double s3) {
+            double perimeter = s1 + s2 + s3;
+            double totalDistance = 5000;
+            return totalDistance / perimeter;
+        }
+
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Enter side 1: ");
+            double a = sc.nextDouble();
+
+            System.out.print("Enter side 2: ");
+            double b = sc.nextDouble();
+
+            System.out.print("Enter side 3: ");
+            double c = sc.nextDouble();
+
+            double rounds = calculateRounds(a, b, c);
+
+            System.out.println("Total rounds needed to complete 5km: " + rounds);
+        }
+}
